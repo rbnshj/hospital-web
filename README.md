@@ -19,17 +19,17 @@ A simple Django-based website for a hospital, providing essential functionalitie
 - Required Python packages listed in `requirements.txt`
 
 ### Installation
-1. **Clone the repository**
-   git clone https://github.com/yourusername/hospital-web.git
-2. **Navigate to the django folder**
+1. **Clone the repository**:
+   git clone https://github.com/rbnshj/hospital-web.git
+2. **Navigate to the django folder**:
    cd hospital-web/django
-3. **Install the dependencies**
+3. **Install the dependencies**:
    pip install -r requirements.txt
-4. **Migrate the database**
+4. **Migrate the database**:
    python manage.py migrate
-5. **Run the server**
+5. **Run the server**:
    python manage.py runserver
-6. **Access the website**
+6. **Access the website**:
    Open your web browser and go to http://127.0.0.1:8000/
 
 ## Contributing
