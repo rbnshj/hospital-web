@@ -20,4 +20,5 @@ A simple Django-based website for a hospital, providing essential functionalitie
 
 ### Installation
 1. **Clone the repository**
-
+2. **Navigate to the django folder** using the command prompt
+3. **Install the dependencies**
