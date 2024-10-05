@@ -30,7 +30,7 @@ A simple Django-based website for a hospital, providing essential functionalitie
 5. **Run the server**:
    python manage.py runserver
 6. **Access the website**:
-   Open your web browser and go to http://127.0.0.1:8000/
+   Open your web browser(preferably Google Chrome) and go to http://127.0.0.1:8000/
 
 ## Contributing
 Contributions are welcome! Please feel free to open an issue or submit a pull request.
