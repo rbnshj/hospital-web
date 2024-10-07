@@ -13,7 +13,7 @@ A simple Django-based website for a hospital, providing essential functionalitie
 ## Getting Started
 
 ### Prerequisites
-- Python 3.x
+- Python 3.12.7
 - Django
 - SQLite (included with Django)
 - Required Python packages listed in `requirements.txt`
