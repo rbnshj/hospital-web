@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Booking Payment{% endblock %}
+{% block content %}
+    <h1 class = "text-center">Confirm Your Payment</h1>
+    <hr>
+    <div class = "container w-50 text-center p-3 my-5 bg-info">
+        
+        <h5><strong>Hospital:</strong> City Hospital</h5>
+        <h5><strong>Service:</strong> Doctor Appointment: {{payment.doctor}}</h5>
+        <h5><strong>Amount:</strong> ₹500</h5>
+        
+
+        {% if payment %}
+            <form action="{% url 'payment_status' %}" method="POST" class="payment-form">
+                {% csrf_token %}
+                <script
+                    src="https://checkout.razorpay.com/v1/checkout.js"
+                    data-key="rzp_test_BJzMHCR6f7fAac" 
+                    data-amount="{{ payment.amount }}"
+                    data-currency="{{ payment.currency }}"
+                    data-order_id="{{ payment.id }}"
+                    data-buttontext="Proceed to Pay"
+                    data-name="City Hospital"
+                    data-description="Doctor Appointment: {{payment.doctor}}"
+                    data-image="{% static 'images/cityhospital-logo.png' %}"
+                    data-prefill.name="{{ payment.name }}"
+                    data-prefill.email="{{ payment.email }}"
+                    data-theme.color="#00FDFF"
+                ></script>
+                <input type="hidden" custom="Hidden Element" name="hidden"/>
+            </form>
+        {% else %}
+            <p>Payment details are missing. Please try again.</p>
+        {% endif %}
+
+    </div>
+{% endblock %}
